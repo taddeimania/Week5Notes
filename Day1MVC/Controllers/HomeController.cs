@@ -22,8 +22,7 @@ namespace Day1MVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
+            ViewBag.Message = "The Iron Yard - From Code";
             return View();
         }
     }
