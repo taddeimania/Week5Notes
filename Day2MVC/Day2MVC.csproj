@@ -130,12 +130,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\TagController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201702071556111_initial.cs" />
     <Compile Include="Migrations\201702071556111_initial.Designer.cs">
       <DependentUpon>201702071556111_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702071643347_addedtag.cs" />
+    <Compile Include="Migrations\201702071643347_addedtag.Designer.cs">
+      <DependentUpon>201702071643347_addedtag.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BlogPost.cs" />
@@ -176,6 +181,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\BlogPost\Index.cshtml" />
+    <Content Include="Views\Tag\Create.cshtml" />
+    <Content Include="Views\Tag\Delete.cshtml" />
+    <Content Include="Views\Tag\Details.cshtml" />
+    <Content Include="Views\Tag\Edit.cshtml" />
+    <Content Include="Views\Tag\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,6 +201,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702071556111_initial.resx">
       <DependentUpon>201702071556111_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702071643347_addedtag.resx">
+      <DependentUpon>201702071643347_addedtag.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

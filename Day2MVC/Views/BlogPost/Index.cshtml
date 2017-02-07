@@ -31,4 +31,10 @@
             @blogPost.Created
         </div>
     </div>
+    <ul>
+        @foreach (var tag in blogPost.Tags)
+        {
+            <li>@tag.Name</li>
+        }
+    </ul>
 }
