@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.PageTitle = "Index";
+}
+
+<h2>Welcome To Your Blog</h2>
+
+@using (Html.BeginForm("Create", "BlogPost"))
+{
+    <p>
+        @Html.TextBox("Title", null, new {@class = "form-control", placeholder = "Title" })
+    </p>
+    <p>
+        @Html.TextBox("Body", null, new {@class = "form-control", placeholder = "Body" })
+    </p>
+    <p>
+        <input type="submit" class="btn btn-default" value="Create Blog Post" />
+    </p>
+}
+
+@foreach(var blogPost in ViewBag.AllBlogPosts)
+{
+    <div class="row">
+        <div class="col-md-2">
+            @blogPost.Title
+        </div>
+        <div class="col-md-8">
+            @blogPost.Body
+        </div>
+        <div class="col-md-2">
+            @blogPost.Created
+        </div>
+    </div>
+}
