@@ -18,6 +18,12 @@ namespace Day2MVC.Controllers
             return View();
         }
 
+        public ActionResult Details(int id)
+        {
+            BlogPost blog = db.BlogPosts.First(b => b.Id == id);
+            return View(blog);
+        }
+
         [HttpPost]
         public ActionResult Create(BlogPost blogPost)
         {

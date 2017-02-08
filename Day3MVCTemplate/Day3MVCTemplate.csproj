@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D313ADBE-712B-48D4-A9E0-08AC150CCAD8}</ProjectGuid>
+    <ProjectGuid>{E8469EF7-ADA5-4C99-BA62-81A064A4F6CE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Day2MVC</RootNamespace>
-    <AssemblyName>Day2MVC</AssemblyName>
+    <RootNamespace>Day3MVCTemplate</RootNamespace>
+    <AssemblyName>Day3MVCTemplate</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -129,33 +129,35 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\BlogPostController.cs" />
-    <Compile Include="Controllers\TagController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702071556111_initial.cs" />
-    <Compile Include="Migrations\201702071556111_initial.Designer.cs">
-      <DependentUpon>201702071556111_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702071643347_addedtag.cs" />
-    <Compile Include="Migrations\201702071643347_addedtag.Designer.cs">
-      <DependentUpon>201702071643347_addedtag.cs</DependentUpon>
+    <Compile Include="Migrations\201702081631409_inintial.cs" />
+    <Compile Include="Migrations\201702081631409_inintial.Designer.cs">
+      <DependentUpon>201702081631409_inintial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BlogPost.cs" />
-    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\business-casual.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\intro-pic.jpg" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
+    <Content Include="index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -178,15 +180,17 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutX.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\BlogPost\Index.cshtml" />
-    <Content Include="Views\Tag\Create.cshtml" />
-    <Content Include="Views\Tag\Delete.cshtml" />
-    <Content Include="Views\Tag\Details.cshtml" />
-    <Content Include="Views\Tag\Edit.cshtml" />
-    <Content Include="Views\Tag\Index.cshtml" />
-    <Content Include="Views\BlogPost\Details.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Review\Create.cshtml" />
+    <Content Include="Views\Review\Delete.cshtml" />
+    <Content Include="Views\Review\Details.cshtml" />
+    <Content Include="Views\Review\Edit.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -200,11 +204,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702071556111_initial.resx">
-      <DependentUpon>201702071556111_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702071643347_addedtag.resx">
-      <DependentUpon>201702071643347_addedtag.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702081631409_inintial.resx">
+      <DependentUpon>201702081631409_inintial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -223,9 +224,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62536</DevelopmentServerPort>
+          <DevelopmentServerPort>61298</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62536/</IISUrl>
+          <IISUrl>http://localhost:61298/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
